@@ -41,7 +41,6 @@ CREATE TABLE batch (
 CREATE TABLE product (
     id uuid NOT NULL default uuid_generate_v1mc(),
     name varchar NOT NULL,
-    additional_data jsonb NOT NULL,
     created_at timestamp(0) without time zone,
     updated_at timestamp(0) without time zone,
     CONSTRAINT product_pkey PRIMARY KEY (id)
