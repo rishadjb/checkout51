@@ -1,0 +1,10 @@
+[
+	{
+		"product_name": "",
+		"source_name": "checkout51",
+		"key": "client_class",
+		"data": {
+		    "class": "Checkout51"
+		}
+	}
+]
