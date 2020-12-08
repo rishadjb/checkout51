@@ -12,5 +12,12 @@
 */
 
 Route::group(['middleware' => ['api']], function () {
-	
+
+    Route::get('/uploadoffers/{source}', 'BatchController@batchUpload');
+
+    Route::get('/viewoffers/{source}', 'OfferController@searchOffers');
+
+    Route::get('/editoffers/{source}', 'OfferController@editOffers');
+
+    Route::get('/offer/{offerId}/update', 'OfferController@update');
 });

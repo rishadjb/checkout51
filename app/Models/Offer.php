@@ -45,4 +45,19 @@ class Offer extends UuidModel
     protected $casts = [
         'additional_data' => 'array',
     ];
+
+    public function format()
+    {
+        return [
+            'offer_id' => $this->offer_id,
+            'cash_back' => number_format((float) $this->cash_back, 2, '.', ''),
+            'image_url' => $this->image_url,
+            'active' => $this->active,
+            'product_name' => $this->product->name,
+        ];
+    }
+
+    public function product() {
+        return $this->belongsTo('App\Models\Product', 'product_id');
+    }
 }
