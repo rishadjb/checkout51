@@ -1,0 +1,5 @@
+#!/bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+sed "s/'//g" ${DIR}/.env > ${DIR}/flyway/conf/flyway.conf
+${DIR}/flyway/flyway migrate
